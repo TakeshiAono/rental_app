@@ -13,17 +13,18 @@ class RentalPropertiesController < ApplicationController
   # GET /rental_properties/new
   def new
     @rental_property = RentalProperty.new
-    # @rental_property.nearest_stations.new
     @rental_property.stations.build
   end
 
   # GET /rental_properties/1/edit
   def edit
-
+    @station_num = @rental_property.stations.count
+    @rental_property.stations.build
   end
 
   # POST /rental_properties or /rental_properties.json
   def create
+    byebug
     @rental_property = RentalProperty.new(rental_property_params)
 
     respond_to do |format|
@@ -67,6 +68,6 @@ class RentalPropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def rental_property_params
-      params.require(:rental_property).permit(:name, :rent, :address, :age, :note, :nearest_station_id, stations_attributes: %i[station_name line_name time])
+      params.require(:rental_property).permit(:name, :rent, :address, :age, :note, :nearest_station_id, stations_attributes: %i[id station_name line_name time])
     end
 end
