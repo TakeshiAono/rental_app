@@ -10,7 +10,6 @@
       <th>Address</th>
       <th>Age</th>
       <th>Note</th>
-      <th>Nearest station</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +22,6 @@
         <td><%= rental_property.address %></td>
         <td><%= rental_property.age %></td>
         <td><%= rental_property.note %></td>
-        <td><%= rental_property.nearest_station_id %></td>
         <td><%= link_to 'Show', rental_property %></td>
         <td><%= link_to 'Edit', edit_rental_property_path(rental_property) %></td>
         <td><%= link_to 'Destroy', rental_property, method: :delete, data: { confirm: 'Are you sure?' } %></td>

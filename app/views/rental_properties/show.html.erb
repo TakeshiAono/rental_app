@@ -25,10 +25,5 @@
   <%= @rental_property.note %>
 </p>
 
-<p>
-  <strong>Nearest station:</strong>
-  <%= @rental_property.nearest_station_id %>
-</p>
-
 <%= link_to 'Edit', edit_rental_property_path(@rental_property) %> |
 <%= link_to 'Back', rental_properties_path %>

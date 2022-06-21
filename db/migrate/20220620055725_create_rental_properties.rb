@@ -6,7 +6,6 @@ class CreateRentalProperties < ActiveRecord::Migration[6.0]
       t.string :address
       t.integer :age
       t.text :note
-      t.reference :nearest_station_id
 
       t.timestamps
     end
