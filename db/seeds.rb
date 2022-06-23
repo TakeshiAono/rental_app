@@ -10,6 +10,6 @@
 i=1
 10.times{
   RentalProperty.create!(name: "rent#{i}", rent:i, address:i, age: i, note: i)
-  Station.create!(name: "station#{i}", address:i)
+  Station.create!(station_name: "station#{i}", line_name: "line#{i}", time:i)
   i += 1
 }

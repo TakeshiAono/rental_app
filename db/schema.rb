@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(version: 2022_06_21_051108) do
   end
 
   create_table "stations", force: :cascade do |t|
-    t.string "name"
-    t.text "address"
+    t.string "station_name"
+    t.string "line_name"
+    t.integer "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
