@@ -24,7 +24,6 @@ class RentalPropertiesController < ApplicationController
 
   # POST /rental_properties or /rental_properties.json
   def create
-    byebug
     @rental_property = RentalProperty.new(rental_property_params)
 
     respond_to do |format|

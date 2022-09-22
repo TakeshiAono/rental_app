@@ -35,7 +35,6 @@
     <%= form.label :note %>
     <%= form.text_area :note %>
   </div>
-
   <hr>
   <p><%= "最寄り駅登録数:#{@station_num ||= 0 }" %></p>
   <% if action_name == "new"  %>
@@ -65,7 +64,9 @@
 
   <% else %>
     <% counter = 1 %>
+
     <%= form.fields_for :stations do |station| %>
+<% byebug %>
     <p><%= "最寄り駅#{counter}" %></p>
       <%= station.label :駅名 %>
       <%= station.text_field :station_name %>
